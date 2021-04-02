@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyVideoActivity"
+    android:background="#fff"
+    >
+    <RelativeLayout
+        android:id="@+id/video_skin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000">
+        <com.google.android.exoplayer.AspectRatioFrameLayout
+            android:id="@+id/video_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            >
+            <SurfaceView
+                android:id="@+id/surface_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                />
+        </com.google.android.exoplayer.AspectRatioFrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/video_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#000"
+            >
+            <ImageButton
+                android:id="@+id/py"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:background="@drawable/pause"/>
+            <SeekBar
+                android:id="@+id/sk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/py"
+                android:layout_toLeftOf="@+id/fs"/>
+            <ImageButton
+                android:id="@+id/fs"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/full"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

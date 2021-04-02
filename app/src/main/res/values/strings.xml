@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">安卓实验</string>
+    <string name="search_hint">搜索</string>
+    <string name="main_activity">好友列表</string>
+    <string name="add_activity">添加陌生人</string>
+    <string name="edit_activity">编辑信息</string>
+    <string name="title_activity_detailed_information">详细信息</string>
+    <string name="searchView_title">搜索</string>
+    <string name="title_activity_tab_frament">TabFramentActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="song">音乐</string>
+    <string name="singer">歌手</string>
+    <string name="time">时间</string>
+    <string name="sequence">顺序播放（默认）</string>
+    <string name="random">随机播放</string>
+    <string name="single">单曲循环</string>
+
+
+
+    <string name="btn_ok">确定</string>
+    <string name="btn_cancel">取消</string>
+    <string name="tag_title_OpenFile">打开文件</string>
+    <string name="tag_fragment_FileSelect">Open File</string>
+    <string name="tag_title_SaveFile">保存文件</string>
+    <string name="tag_fragment_FileSave">Save File</string>
+    <string name="tag_save_hint">请输入文件名</string>
+</resources>

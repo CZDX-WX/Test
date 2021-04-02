@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.czdxwx.test"
+    android:requestLegacyExternalStorage="true">
+
+    <!-- 允许前台服务 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 广播权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 摄像头权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 在SDCard读取数据的权限 -->
+    <uses-feature android:name="android.hardware.camera" /> <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 读取SD卡的权限:打开相册选取图片所必须的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 写入SD卡的权限：如果你希望保存相机拍照后的照片 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/astronaut"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Test.NoActionBar"
+        tools:targetApi="q">
+        <!--        <provider-->
+        <!--            android:name=".content.MyContentProvider"-->
+        <!--            android:authorities="com.czdxwx.text.content"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="true"></provider>-->
+        <activity android:name=".Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TabFragmentActivity">
+
+            <intent-filter>
+                <action android:name="com.czdxwx.reStart" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".MyMusicActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.czdxwx.ToMyMusic" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PayActivity">
+            <intent-filter>
+                <action android:name="com.czdxwx.ToPay" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MyVideoActivity">
+            <intent-filter>
+                <action android:name="com.czdxwx.ToMyVideo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".majorSetActivity">
+            <intent-filter>
+                <action android:name="com.czdxwx.ToMajorSet" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fontsizeActivity"
+            android:label="字体大小">
+            <intent-filter>
+                <action android:name="com.czdxwx.ToFontSize" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ClassmateActivity" />
+        <activity
+            android:name=".editActivity"
+            android:label="@string/edit_activity">
+            <intent-filter>
+                <action android:name="com.czdxwx.editInformation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".addActivity"
+            android:label="@string/add_activity"
+            android:theme="@style/Theme.Test.NoActionBar">
+            <intent-filter>
+                <action android:name="com.czdxwx.addment" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".detailedInformationActivity"
+            android:label="@string/title_activity_detailed_information"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="com.czdxwx.getInformation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.NormalService"
+            android:enabled="true" />
+        <service
+            android:name=".service.ReStartService"
+            android:enabled="true" />
+        <service
+            android:name=".service.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+    </application>
+
+</manifest>

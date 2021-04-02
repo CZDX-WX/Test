@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Test" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cadetblue</item>
+        <item name="colorPrimaryVariant">@color/cadetblue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cadetblue</item>
+        <item name="colorSecondaryVariant">@color/cadetblue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">@color/mistyrose</item>
+    </style>
+
+    <!--隐藏actionBar-->
+    <style name="Theme.Test.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!--把该属性改为false即可使menu位置位于toolbar之下-->
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="Theme.Test.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="Theme.Test.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.Test.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Test.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Test.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>
