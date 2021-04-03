@@ -7,13 +7,18 @@
     android:orientation="vertical"
     tools:context=".MyMusicActivity">
 
-    <android.widget.Toolbar
-        android:id="@+id/myMusic_toolbar"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/darkcyan"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Test.AppBarOverlay">
+
+        <android.widget.Toolbar
+            android:id="@+id/myMusic_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/Theme.Test"
+            app:popupTheme="@style/Theme.Test.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_recyclerView"

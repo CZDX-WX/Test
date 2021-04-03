@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.czdxwx.test"
     android:requestLegacyExternalStorage="true">
-
     <!-- 允许前台服务 -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 广播权限 -->
@@ -25,11 +24,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test.NoActionBar"
         tools:targetApi="q">
-        <!--        <provider-->
-        <!--            android:name=".content.MyContentProvider"-->
-        <!--            android:authorities="com.czdxwx.text.content"-->
-        <!--            android:enabled="true"-->
-        <!--            android:exported="true"></provider>-->
+        <activity android:name=".ShareFriendActivity">
+            <intent-filter>
+                <action android:name="com.czdxwx.share" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,13 +40,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".TabFragmentActivity">
-
             <intent-filter>
                 <action android:name="com.czdxwx.reStart" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MyMusicActivity"
@@ -85,7 +85,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ClassmateActivity" />
         <activity
             android:name=".editActivity"
@@ -128,7 +127,6 @@
             android:enabled="true"
             android:exported="true" />
 
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -138,7 +136,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_path" />
         </provider>
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -148,8 +145,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-
-
     </application>
 
 </manifest>

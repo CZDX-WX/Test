@@ -186,22 +186,10 @@ public class MyVideoActivity extends Activity implements SurfaceHolder.Callback,
     public void onStateChanged(boolean playWhenReady, int playbackState) {
         String text = "playWhenReady=" + playWhenReady + ", playbackState=";
         switch (playbackState) {
-            case ExoPlayer.STATE_BUFFERING:
-
-                break;
-            case ExoPlayer.STATE_ENDED:
-
-                break;
-            case ExoPlayer.STATE_IDLE://空的
-
-                break;
             case ExoPlayer.STATE_PREPARING:
-
                 surfaceView.setVisibility(View.VISIBLE);
-
                 break;
             case ExoPlayer.STATE_READY:
-
                 boolean first = true;
                 if (first) {
                     //记录视频的宽高
@@ -221,7 +209,6 @@ public class MyVideoActivity extends Activity implements SurfaceHolder.Callback,
                 }
                 break;
             default:
-
                 break;
         }
     }

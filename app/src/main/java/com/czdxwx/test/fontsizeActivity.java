@@ -45,15 +45,11 @@ private Toolbar mToolbar;
                 size = (float) progress;
                 fontshow.setTextSize(size);
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
         seekBar.setProgress(50);

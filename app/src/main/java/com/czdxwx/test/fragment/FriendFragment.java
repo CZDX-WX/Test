@@ -124,6 +124,11 @@ public class FriendFragment extends Fragment {
                         intent.setAction("com.czdxwx.addment");
                         startActivity(intent);
                         break;
+                    case R.id.shareWithFriend:
+                        Intent i = new Intent();
+                        i.setAction("com.czdxwx.share");
+                        startActivity(i);
+                        break;
                     case R.id.in_import:
                         try {
                             FileInputStream fis=new FileInputStream(file);
