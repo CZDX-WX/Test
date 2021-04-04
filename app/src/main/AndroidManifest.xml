@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.czdxwx.test"
     android:requestLegacyExternalStorage="true">
+
     <!-- 允许前台服务 -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 广播权限 -->
@@ -24,6 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test.NoActionBar"
         tools:targetApi="q">
+
+
         <activity android:name=".ShareFriendActivity">
             <intent-filter>
                 <action android:name="com.czdxwx.share" />
@@ -31,7 +34,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -125,7 +127,7 @@
         <service
             android:name=".service.MusicService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -145,6 +147,16 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+
+        <service
+            android:name=".service.RemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process="com.test.remote.msg">
+            　　<intent-filter>
+            　　　　<action android:name="com.czdxwx.test.service.RemoteService"/>
+            　　</intent-filter>
+        </service>
     </application>
 
 </manifest>
