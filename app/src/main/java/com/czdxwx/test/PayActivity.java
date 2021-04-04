@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -151,6 +152,7 @@ public class PayActivity extends AppCompatActivity {
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.MATCH_PARENT);
                 input.setLayoutParams(lp);
+                input.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 builder.setView(input);
                 builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
