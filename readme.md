@@ -1,3 +1,3 @@
-1.第三方支付未能实现
-2.好友分享未实现
-3.视频后台未实现
+notice:'\n'
+内部存储需在对于文件夹新建“store_in”的txt文件（打开Device file explorer 根据/data/data/com.czdxwx.test/files/store_in.txt 新建）。'\n'
+选取照片只能在相册里，不能在 最近 里面，否则无法打开
