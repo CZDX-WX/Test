@@ -1,4 +1,5 @@
-1.notice:  gradle版本低需要自己配个高版本gradle
+1.notice:  gradle版本低需要自己配个高版本gradle  
+
 2.媒体那方面内容借鉴网上博客和书上代码（非学校教材），和实验指导书出入比较大，但是我不想浪费时间在这上面了。
 
 3.内部存储需在对于文件夹新建“store_in”的txt文件（打开Device file explorer 根据/data/data/com.czdxwx.test/files/store_in.txt 新建）。  
